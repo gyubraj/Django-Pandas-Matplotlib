@@ -1,0 +1,26 @@
+<!doctype html>
+
+<html>
+<head>
+    <title>PDF : {{obj.name}}</title>
+    <style>
+    .image{
+        width:100%;
+        height:auto;
+    }
+
+    </style>
+
+</head>
+
+<body>
+<h1>{{obj.name}}</h1>
+<hr>
+{% if obj.image %}
+    <img src="{{ obj.image.path }}" alt={{obj.name}} class="image">
+{% endif %}
+<br>
+<h3>Remarks</h3>
+<p>{{obj.remarks}}</p>
+</body>
+</html>
